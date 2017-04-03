@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /project-setup                                                                    controllers.Application.index
+GET         /project-setup/                                                                   controllers.Application.index
+GET         /project-setup/services                                                           controllers.Application.index
+GET         /project-setup/services/                                                          controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /project-setup/services/assets/*file                                              controllers.Assets.at(path="/public", file)
+
+GET         /project-setup/services/swagger                                                   controllers.Application.swagger
+GET         /project-setup/services/swagger.json                                              controllers.ApiHelpController.getResources
+
+GET         /project-setup/services/swagger.json/status                                       controllers.ApiHelpController.getResource(path = "/status")
+GET        /project-setup/services/status                                                     controllers.StatusController.ping()
+
+
+
