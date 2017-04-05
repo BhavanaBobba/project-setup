@@ -16,6 +16,7 @@ GET         /project-setup/services/swagger.json                                
 
 GET         /project-setup/services/swagger.json/status                                       controllers.ApiHelpController.getResource(path = "/status")
 GET        /project-setup/services/status                                                     controllers.StatusController.ping()
+POST        /project-setup/services/status                                                    controllers.StatusController.addingTwoNumbers()
 
 
 

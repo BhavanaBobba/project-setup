@@ -21,10 +21,10 @@ libraryDependencies ++= Seq(
   "org.jbehave" % "jbehave-scala" % "3.9.5" % "test"
 )
 
-//resolvers := Seq(
-//  Resolver.mavenLocal,
-//  Resolver sonatypeRepo "public"
-//)
+resolvers := Seq(
+  Resolver.mavenLocal,
+  Resolver sonatypeRepo "public"
+)
 
 resolvers += "TypeSafe Ivy releases" at "http://dl.bintray.com/typesafe/ivy-releases/"
 
@@ -33,4 +33,4 @@ resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 includeFilter in (Assets, LessKeys.less) := "*.less"
 excludeFilter in (Assets, LessKeys.less) := "_*.less"
 
-
+resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
